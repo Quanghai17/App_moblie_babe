@@ -157,9 +157,7 @@ class _ListRoomsState extends State<ListRooms> {
                                         height: Dimensions.height10 / 2,
                                       ),
                                       BigText(
-                                        text: 'price'.tr +
-                                            _formatCurrency(roomsController
-                                                .roomList[index].price!),
+                                        text: 'Reference price'.tr,
                                         color: Colors.lightBlue,
                                         maxLines: 2,
                                         size: Dimensions.font16,

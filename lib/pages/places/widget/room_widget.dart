@@ -122,9 +122,7 @@ class _RoomWidgetState extends State<RoomWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             BigText(
-                              text: "price".tr +
-                                  _formatCurrency(
-                                      controller.roomList[index].price!),
+                              text: "Reference price".tr,
                               color: AppColors.textColorLightBlue,
                             ),
                             SizedBox(

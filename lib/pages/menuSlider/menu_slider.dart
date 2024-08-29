@@ -64,7 +64,7 @@ class _MenuSliderState extends State<MenuSlider> {
 
   @override
   void dispose() {
-    subscription?.cancel();
+    subscription.cancel();
     super.dispose();
   }
 
@@ -178,20 +178,20 @@ class _MenuSliderState extends State<MenuSlider> {
                         Get.toNamed(RouteHelper.getNewsPage());
                       },
                     ),
-                    ListTile(
-                      leading: Icon(
-                        Icons.tour_outlined,
-                        color: active,
-                      ),
-                      title: SmallText(
-                        text: "tour".tr,
-                        size: Dimensions.font16,
-                        color: deactive,
-                      ),
-                      onTap: () {
-                        Get.toNamed(RouteHelper.getTourPage());
-                      },
-                    ),
+                    // ListTile(
+                    //   leading: Icon(
+                    //     Icons.tour_outlined,
+                    //     color: active,
+                    //   ),
+                    //   title: SmallText(
+                    //     text: "tour".tr,
+                    //     size: Dimensions.font16,
+                    //     color: deactive,
+                    //   ),
+                    //   onTap: () {
+                    //     Get.toNamed(RouteHelper.getTourPage());
+                    //   },
+                    // ),
                     ListTile(
                       leading: Icon(
                         Icons.location_on,

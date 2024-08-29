@@ -29,7 +29,7 @@ class _MenuPageState extends State<MenuPage> {
     return [
       HomePage(),
       //SignUpPage(),
-      TourPage(),
+      // TourPage(),
       TouristAttractionPage(),
       SearchPage(),
       VR360WebView(
@@ -47,12 +47,12 @@ class _MenuPageState extends State<MenuPage> {
         activeColorPrimary: AppColors.colorAppBar!,
         inactiveIcon: Icon(Icons.home, color: Theme.of(context).disabledColor),
       ),
-      PersistentBottomNavBarItem(
-        icon: Icon(Icons.tour),
-        title: "tour".tr,
-        activeColorPrimary: AppColors.colorAppBar!,
-        inactiveIcon: Icon(Icons.tour, color: Theme.of(context).disabledColor),
-      ),
+      // PersistentBottomNavBarItem(
+      //   icon: Icon(Icons.tour),
+      //   title: "tour".tr,
+      //   activeColorPrimary: AppColors.colorAppBar!,
+      //   inactiveIcon: Icon(Icons.tour, color: Theme.of(context).disabledColor),
+      // ),
       PersistentBottomNavBarItem(
         icon: Icon(Icons.location_on),
         title: "tourist_attraction".tr,

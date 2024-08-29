@@ -126,9 +126,7 @@ class _DishesWidgetState extends State<DishesWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   BigText(
-                                    text: "price".tr +
-                                        _formatCurrency(controller
-                                            .dishesList[index].price!),
+                                    text: "Reference price".tr,
                                     color: Colors.lightBlue,
                                   ),
                                   SizedBox(

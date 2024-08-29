@@ -2,24 +2,25 @@ import 'package:get/get.dart';
 import 'package:flutter_babe/data/api/api_client.dart';
 import 'package:flutter_babe/utils/app_constants.dart';
 
-class PlacesRepo {
+class NotificationsRepo {
   final ApiClient apiClient;
 
-  PlacesRepo({
+  NotificationsRepo({
     required this.apiClient,
   });
 
-  Future<Response> getAllPlaceInfor({
+  // Hàm lấy danh sách thông báo
+  Future<Response> getAllNotifications({
     String? locale,
-    int? paginate,
     int? page,
+    int? limit,
   }) async {
-    // Xây dựng danh sách tham số truy vấn từ các đối số được truyền vào
     Map<String, dynamic> parameters = {};
     if (locale != null) parameters['language'] = locale;
-    if (paginate != null) parameters['paginate'] = paginate.toString();
     if (page != null) parameters['page'] = page.toString();
-    String url = AppConstants.PLACES_URL;
+    if (limit != null) parameters['limit'] = limit.toString();
+
+    String url = AppConstants.NOTIFICATIONS_URL;
     bool isFirstParam = true;
 
     parameters.forEach((key, value) {
@@ -29,19 +30,8 @@ class PlacesRepo {
       } else {
         url += '&';
       }
-
       url += '$key=$value';
     });
-    return await apiClient.getData(url);
-  }
-
-  Future<Response> getPlaceDetail({int? placeID, String? language}) async {
-    language ??= "";
-
-    String url = AppConstants.PLACES_URL + "/${placeID}";
-    if (language.isNotEmpty) {
-      url += "?language=" + language;
-    }
 
     return await apiClient.getData(url);
   }

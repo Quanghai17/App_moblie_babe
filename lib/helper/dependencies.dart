@@ -12,6 +12,7 @@ import 'package:flutter_babe/controller/dishes_controller.dart';
 import 'package:flutter_babe/controller/history_book_room_controller.dart';
 import 'package:flutter_babe/controller/history_table_controller.dart';
 import 'package:flutter_babe/controller/localization_controller.dart';
+import 'package:flutter_babe/controller/notification_controller.dart';
 import 'package:flutter_babe/controller/places_controller.dart';
 import 'package:flutter_babe/controller/post_controller.dart';
 import 'package:flutter_babe/controller/restaurant_controller.dart';
@@ -31,6 +32,7 @@ import 'package:flutter_babe/data/repository/contact_repo.dart';
 import 'package:flutter_babe/data/repository/dish_repo.dart';
 import 'package:flutter_babe/data/repository/history_book_room_repo.dart';
 import 'package:flutter_babe/data/repository/history_table_repo.dart';
+import 'package:flutter_babe/data/repository/notification_repo.dart';
 import 'package:flutter_babe/data/repository/places_repo.dart';
 import 'package:flutter_babe/data/repository/post_repo.dart';
 import 'package:flutter_babe/data/repository/restaurant_repo.dart';
@@ -61,6 +63,7 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => TouristAttractionRepo(apiClient: Get.find()));
   Get.lazyPut(() => PostRepo(apiClient: Get.find()));
   Get.lazyPut(() => PlacesRepo(apiClient: Get.find()));
+  Get.lazyPut(() => NotificationsRepo(apiClient: Get.find()));
   Get.lazyPut(() => RestaurantRepo(apiClient: Get.find()));
   Get.lazyPut(() => RoomRepo(apiClient: Get.find()));
   Get.lazyPut(() => DishRepo(apiClient: Get.find()));
@@ -89,6 +92,8 @@ Future<Map<String, Map<String, String>>> init() async {
       PostController(postRepo: Get.find(), sharedPreferences: Get.find()));
   Get.lazyPut(() =>
       PlacesController(placesRepo: Get.find(), sharedPreferences: Get.find()));
+  Get.lazyPut(() => NotificationController(
+      notificationsRepo: Get.find(), sharedPreferences: Get.find()));
   Get.lazyPut(() => RestaurantController(
       restaurantRepo: Get.find(), sharedPreferences: Get.find()));
   Get.lazyPut(() => AuthController(authRepo: Get.find()));

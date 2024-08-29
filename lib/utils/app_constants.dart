@@ -19,6 +19,7 @@ class AppConstants {
   static const String SEARCH_URL = "api/v1/search";
   static const String HISTORY_BOOK_TABLE_URL = "api/v1/book-tables";
   static const String BANNER_URL = "api/v1/banners";
+  static const String NOTIFICATIONS_URL = "api/v1/notifications";
   static const String URL_VR360 = "";
 
   //auth

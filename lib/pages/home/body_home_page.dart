@@ -44,18 +44,18 @@ class _BodyHomePageState extends State<BodyHomePage> {
             children: [
               //banner
               BannerWidget(),
+              SizedBox(height: Dimensions.height10),
               //tour
-              SizedBox(height: Dimensions.height10),
-              _buildSection(
-                  "the_tour_is_of_most_interest".tr, "book_quickly".tr),
-              SizedBox(height: Dimensions.height10),
-              !tourController.isLoading
-                  ? TourPageview(tourList: tourController.tourList)
-                  : CustomSkelton(
-                      height: Dimensions.height10 * 31,
-                      width: Dimensions.width10 * 27,
-                    ),
-              SizedBox(height: Dimensions.height30),
+              // _buildSection(
+              //     "the_tour_is_of_most_interest".tr, "book_quickly".tr),
+              // SizedBox(height: Dimensions.height10),
+              // !tourController.isLoading
+              //     ? TourPageview(tourList: tourController.tourList)
+              //     : CustomSkelton(
+              //         height: Dimensions.height10 * 31,
+              //         width: Dimensions.width10 * 27,
+              //       ),
+              // SizedBox(height: Dimensions.height30),
 
               //tourist attraction
               _buildSection("attractive_tourist_destination".tr, "relax".tr),

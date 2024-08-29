@@ -84,6 +84,7 @@
   "people": "People",
   "select": "Select",
   "price": "Price: ",
+  "Reference price": "Reference price",
   "warning_content_number_people": "Number of people cannot be less than 1",
   "warning_content_number_table": "Number of table cannot be less than 1",
   "room_booking_history": "Accommodation booking history",
