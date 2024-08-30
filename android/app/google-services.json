@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "61698020665",
+    "project_id": "notification-c9869",
+    "storage_bucket": "notification-c9869.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61698020665:android:6e31bc10d8d8ef2728c4e8",
+        "android_client_info": {
+          "package_name": "com.babe.flutter_babe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTkyOFsWfoAktBbruIN7gaPvGdNRFqcj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61698020665:android:7ae2172522c27a1128c4e8",
+        "android_client_info": {
+          "package_name": "com.example.notifi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTkyOFsWfoAktBbruIN7gaPvGdNRFqcj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

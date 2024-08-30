@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_babe/controller/localization_controller.dart';
 import 'package:flutter_babe/controller/notification_controller.dart';
@@ -6,6 +7,8 @@ import 'package:flutter_babe/controller/post_controller.dart';
 import 'package:flutter_babe/controller/restaurant_controller.dart';
 import 'package:flutter_babe/controller/tour_controller.dart';
 import 'package:flutter_babe/controller/tourist_attraction_controller.dart';
+import 'package:flutter_babe/services/firebase_api.dart';
+import 'package:flutter_babe/services/firebase_options.dart';
 import 'package:flutter_babe/utils/app_constants.dart';
 import 'package:flutter_babe/utils/colors.dart';
 import 'package:flutter_babe/utils/messages.dart';
@@ -20,6 +23,9 @@ Future<void> main() async {
   await Future.delayed(Duration(seconds: 3));
   //await dep.init();
   Map<String, Map<String, String>> _languages = await dep.init();
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await FirebaseApi().initNotifications();
   runApp(MyApp(languages: _languages));
   FlutterNativeSplash.remove();
 }
